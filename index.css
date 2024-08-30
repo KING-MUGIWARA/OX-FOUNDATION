@@ -1,0 +1,326 @@
+/* Ensure the body has a relative position for the watermark positioning */
+body {
+    background-color: #f5f5f5; /* Soft white background for a clean look */
+    color: #333; /* Darker gray for text color */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font family */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: "OX_IMAGE-removebg.png";
+    position: relative; /* Add relative positioning for watermark */
+}
+
+/* Wrapper for the video to enforce 4:3 aspect ratio */
+.video-wrapper {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio (height/width * 100) */
+    margin: 20px auto; /* Center the video */
+    max-width: 80%; /* Control the width of the video */
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Static Watermark */
+.watermark {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    opacity: 0.5; /* Semi-transparent watermark */
+    pointer-events: none; /* Prevent watermark from interfering with clicks */
+    z-index: 10; /* Ensure watermark is above other elements */
+}
+
+.watermark img {
+    width: 150px; /* Adjust the size of the watermark */
+    height: auto;
+}
+
+
+/* Header Styles */
+header {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Subtle border for separation */
+}
+
+.topnav {
+    background-color: rgba(120, 87, 4, 0.783);
+    color: white;
+    padding: 10px 200px;
+    font-family: serif;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.topnav a {
+    color: #333;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: auto;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+    margin: 200 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #965d03; /* Color change on hover */
+}
+
+/* Logo and Title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #666;
+}
+
+.logo {
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Logo Text */
+.logo-text h1 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.logo-text h2 {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: rgb(49, 47, 47)
+}
+
+/* Dropdown Menu Styles */
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropbtn {
+    background-color: rgba(120, 87, 4, 0.783);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+    background-color: #965d03;
+    transform: translateY(-2px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #666;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Video Section */
+.video-description {
+    margin: 20px 0; /* Reduced margin for miniaturization */
+    font-size: 0.8em; /* Miniaturized text */
+}
+
+.video-description h2 {
+    font-size: 1.4em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.video-description video {
+    max-width: 50%; /* Smaller video size */
+    height: auto;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+}
+
+
+
+/* Team Section */
+.team-section {
+    margin: 50px 0;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    text-align: center;
+
+}
+
+.member img {
+    max-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-family: serif;
+    color: #444;
+}
+
+/* Courses Section */
+.courses-section {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.courses-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+.course img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.course-description {
+    text-align: left;
+}
+
+.course-description h3 {
+    font-size: 1.6em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.course-description p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.course-description a {
+    font-size: 1.1em;
+    color: #965d03;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-description a:hover {
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 2px solid #444;
+}
+
+/* Static Watermark */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3; /* Semi-transparent watermark */
+    pointer-events: none; /* Prevent watermark from interfering with clicks */
+    z-index: 10; /* Ensure watermark is above other elements */
+    margin-top: 80px;
+}
+
+.watermark img {
+    width: 500px; /* Adjust the size of the watermark */
+    height: auto;
+}
