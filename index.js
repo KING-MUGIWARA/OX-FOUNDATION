@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+//document.addEventListener('DOMContentLoaded', function() {
 //     // Function to show a message
 //     function showNotAvailableMessage(event) {
 //         event.preventDefault(); // Prevent default link behavior
